@@ -6,13 +6,14 @@
   <title>Get Your $300 Bonus</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Inter", Arial, sans-serif;
       background-color: #ffffff;
       color: #111;
       text-align: center;
       margin: 0;
       padding: 0;
     }
+
     .container {
       display: flex;
       flex-direction: column;
@@ -21,36 +22,48 @@
       height: 100vh;
       padding: 20px;
     }
+
     img.logo {
       width: 120px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       margin-top: -40px;
     }
+
     h1 {
-      font-size: 1.8em;
-      margin-bottom: 25px;
+      font-size: 1.9em;
       line-height: 1.4em;
+      margin-bottom: 30px;
+      color: #0c0c0c;
     }
+
+    h1 span.highlight {
+      color: #00ff91;
+      font-weight: 700;
+    }
+
     /* 🔹 PROMO BLOCK */
     .promo {
       display: inline-block;
       background: #f5f5f5;
-      border: 3px solid #00ff91; /* цвет как у логотипа */
+      border: 3px solid #00ff91;
       border-radius: 50px;
       padding: 15px 35px;
       box-shadow: 0 0 15px rgba(0, 255, 145, 0.3);
       margin: 20px 0 35px;
     }
+
     .promo span.label {
       font-size: 1.1em;
-      color: #048a5b; /* тень — тёмный оттенок логотипа */
+      color: #048a5b;
       margin-right: 10px;
     }
+
     .promo span.code {
       font-size: 1.7em;
       font-weight: bold;
-      color: #00ff91; /* как цвет логотипа */
+      color: #00ff91;
     }
+
     .btn {
       background-color: #007bff;
       color: white;
@@ -63,10 +76,25 @@
       text-decoration: none;
       display: inline-block;
     }
+
     .btn:hover {
       background-color: #0056b3;
       transform: scale(1.05);
     }
+
+    .note {
+      margin-top: 15px;
+      font-size: 0.95em;
+      color: #555;
+      max-width: 300px;
+      line-height: 1.4em;
+    }
+
+    .note span {
+      color: #00a86b;
+      font-weight: 600;
+    }
+
     footer {
       position: absolute;
       bottom: 10px;
@@ -82,7 +110,7 @@
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)n._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -109,7 +137,11 @@
 <body>
   <div class="container">
     <img src="logo.png" alt="Platform Logo" class="logo" />
-    <h1>New platform gives up to $300 bonus to all users!<br>Click below to claim.</h1>
+
+    <h1>
+      Join our <span class="highlight">new platform</span> and instantly get up to<br>
+      <span class="highlight">$300 bonus</span> for new users!
+    </h1>
 
     <div class="promo">
       <span class="label">Your promo code:</span>
@@ -117,6 +149,11 @@
     </div>
 
     <a class="btn" onclick="registerLead()">Get bonus on Telegram</a>
+
+    <div class="note">
+      If the button doesn’t work, copy and paste this in Telegram search:<br>
+      <span>@INDIApromo_bot</span>
+    </div>
   </div>
 
   <footer>© 2025 Bonus Platform. All rights reserved.</footer>
