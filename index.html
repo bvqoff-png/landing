@@ -1,95 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get up to $300 Bonus</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Platform Bonus</title>
+    <style>
+      body {
+        background-color: #ffffff;
+        color: #111;
+        font-family: "Inter", Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        margin: 0;
+        padding: 0 20px;
+      }
+      h1 {
+        font-size: 1.9rem;
+        margin-bottom: 25px;
+        line-height: 1.3;
+      }
+      .promo {
+        font-size: 1.6rem;
+        font-weight: 700;
+        background: #f4f4f4;
+        padding: 15px 30px;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 25px 0;
+        border: 2px dashed #00bcd4;
+        color: #111;
+      }
+      a.button {
+        background: linear-gradient(90deg, #00bcd4, #2196f3);
+        color: white;
+        padding: 16px 45px;
+        border-radius: 50px;
+        font-size: 1.15rem;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      a.button:hover {
+        opacity: 0.9;
+        transform: scale(1.03);
+      }
+      p {
+        margin-top: 45px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
 
-  <!-- ✅ Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '671163556045120');
-    fbq('track', 'PageView');
-  </script>
+    <!-- ✅ Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = "https://connect.facebook.net/en_US/fbevents.js";
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script");
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=671163556045120&ev=PageView&noscript=1"/>
-  </noscript>
+      fbq("init", "671163556045120");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=671163556045120&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- ✅ End Meta Pixel Code -->
+  </head>
 
-  <!-- ✅ Styles -->
-  <style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: linear-gradient(180deg, #f9fcff 0%, #dff3ff 100%);
-      color: #111;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
+  <body>
+    <h1>New platform gives up to $300 bonus to all users! 🎁</h1>
 
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      max-width: 90%;
-      line-height: 1.3;
-      margin-bottom: 1rem;
-    }
+    <div class="promo">Your promo code: <strong>PROMO300</strong></div>
 
-    p {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: #0074aa;
-      margin-bottom: 2rem;
-    }
+    <a
+      href="https://t.me/INDIApromo_bot"
+      class="button"
+      onclick="fbq('track', 'Lead');"
+      target="_blank"
+      >Get bonus on Telegram</a
+    >
 
-    button {
-      background-color: #0088cc;
-      color: #fff;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 8px;
-      padding: 14px 32px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 12px rgba(0,136,204,0.25);
-    }
-
-    button:hover {
-      background-color: #0074aa;
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 1.5rem; }
-      p { font-size: 1rem; }
-      button { font-size: 1rem; padding: 12px 24px; }
-    }
-  </style>
-</head>
-
-<body>
-  <h1>New platform gives up to $300 bonus to all users!<br>Click below to claim.</h1>
-  <p>Your promo code: <strong>PROMO300</strong></p>
-  <button id="tgBtn">Get Bonus on Telegram 💬</button>
-
-  <script>
-    document.getElementById("tgBtn").addEventListener("click", function() {
-      fbq('track', 'Lead'); // lead event for Facebook
-      window.location.href = "https://t.me/INDIApromo_bot";
-    });
-  </script>
-</body>
+    <p>
+      If the button doesn’t work, copy this link manually:<br />
+      <a href="https://t.me/INDIApromo_bot">https://t.me/INDIApromo_bot</a>
+    </p>
+  </body>
 </html>
