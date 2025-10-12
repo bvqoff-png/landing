@@ -24,18 +24,32 @@
     img.logo {
       width: 120px;
       margin-bottom: 30px;
-      margin-top: -40px; /* немного ниже */
+      margin-top: -40px;
     }
     h1 {
       font-size: 1.8em;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       line-height: 1.4em;
     }
+    /* 🔹 PROMO BLOCK */
     .promo {
-      font-size: 1.6em;
+      display: inline-block;
+      background: #f5f5f5;
+      border: 3px solid #00ff91; /* цвет как у логотипа */
+      border-radius: 50px;
+      padding: 15px 35px;
+      box-shadow: 0 0 15px rgba(0, 255, 145, 0.3);
+      margin: 20px 0 35px;
+    }
+    .promo span.label {
+      font-size: 1.1em;
+      color: #048a5b; /* тень — тёмный оттенок логотипа */
+      margin-right: 10px;
+    }
+    .promo span.code {
+      font-size: 1.7em;
       font-weight: bold;
-      margin: 20px 0;
-      color: #0c63e4;
+      color: #00ff91; /* как цвет логотипа */
     }
     .btn {
       background-color: #007bff;
@@ -45,12 +59,13 @@
       font-size: 1.2em;
       border-radius: 8px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.2s;
       text-decoration: none;
       display: inline-block;
     }
     .btn:hover {
       background-color: #0056b3;
+      transform: scale(1.05);
     }
     footer {
       position: absolute;
@@ -62,7 +77,7 @@
     }
   </style>
 
-  <!-- 🔹 Facebook Pixel (замени ID на свой, если нужно) -->
+  <!-- 🔹 Facebook Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -80,13 +95,12 @@
       src="https://www.facebook.com/tr?id=671163556045120&ev=PageView&noscript=1"/>
   </noscript>
 
-  <!-- 🔸 Bot protection + lead tracking -->
+  <!-- 🔸 Bot protection -->
   <script>
     function registerLead() {
-      // Небольшая защита от ботов: событие отправится только после 1.5 сек
       setTimeout(() => {
         fbq('track', 'Lead');
-        window.location.href = "https://t.me/INDIApromo_bot"; // переход на бот
+        window.location.href = "https://t.me/INDIApromo_bot";
       }, 1500);
     }
   </script>
@@ -94,11 +108,14 @@
 
 <body>
   <div class="container">
-    <!-- ЛОГО -->
     <img src="logo.png" alt="Platform Logo" class="logo" />
-
     <h1>New platform gives up to $300 bonus to all users!<br>Click below to claim.</h1>
-    <div class="promo">Your promo code: <strong>PROMO300</strong></div>
+
+    <div class="promo">
+      <span class="label">Your promo code:</span>
+      <span class="code">PROMO300</span>
+    </div>
+
     <a class="btn" onclick="registerLead()">Get bonus on Telegram</a>
   </div>
 
