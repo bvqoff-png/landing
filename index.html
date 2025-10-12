@@ -77,4 +77,53 @@
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
-          n.callMethod ? n.callMethod
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = "https://connect.facebook.net/en_US/fbevents.js";
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script");
+
+      fbq("init", "671163556045120");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=671163556045120&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- ✅ End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <!-- 🟩 Логотип -->
+    <img src="logo.png" alt="Platform Logo" class="logo" />
+
+    <h1>New platform gives up to $300 bonus to all users! 🎁</h1>
+
+    <div class="promo">Your promo code: <strong>PROMO300</strong></div>
+
+    <a
+      href="https://t.me/INDIApromo_bot"
+      class="button"
+      onclick="fbq('track', 'Lead');"
+      target="_blank"
+      >Get bonus on Telegram</a
+    >
+
+    <p>
+      If the button doesn’t work, copy this link manually:<br />
+      <a href="https://t.me/INDIApromo_bot">https://t.me/INDIApromo_bot</a>
+    </p>
+  </body>
+</html>
