@@ -5,22 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>New Platform Bonus</title>
 
-  <!-- Meta Pixel -->
+  <!-- ✅ Meta Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2043099239850160');
-    fbq('track', 'PageView');
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = "https://connect.facebook.net/en_US/fbevents.js";
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(window, document, "script");
+    fbq("init", "2043099239850160");
+    fbq("track", "PageView");
   </script>
   <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2043099239850160&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=2043099239850160&ev=PageView&noscript=1" />
   </noscript>
 
   <style>
@@ -42,12 +50,8 @@
     }
 
     @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.15);
-      }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
 
     h1 {
@@ -72,10 +76,10 @@
 
     .promo strong {
       color: #00ff88;
-      text-shadow: 0 0 15px #00ff88;
+      text-shadow: 0 0 18px #00ff88;
     }
 
-    /* Анимированная зелёная рамка */
+    /* Усиленная анимация рамки */
     .promo::before {
       content: "";
       position: absolute;
@@ -84,10 +88,11 @@
       right: -2px;
       bottom: -2px;
       border-radius: 16px;
-      background: linear-gradient(120deg, #00ff88, #007744, #00ff88);
-      background-size: 300% 300%;
+      background: linear-gradient(120deg, #00ff88, #009955, #00ff88);
+      background-size: 350% 350%;
       z-index: -1;
-      animation: borderMove 3s linear infinite;
+      animation: borderMove 2.6s linear infinite; /* немного быстрее */
+      box-shadow: 0 0 30px #00ff88; /* усилено на 15% */
     }
 
     @keyframes borderMove {
@@ -112,6 +117,7 @@
       z-index: 1;
     }
 
+    /* Кнопка с немного уменьшенной анимацией */
     .btn {
       display: inline-block;
       background: linear-gradient(90deg, #00ff88, #00cc66);
@@ -123,7 +129,7 @@
       text-decoration: none;
       box-shadow: 0 0 25px #00ff88;
       transition: transform 0.3s, box-shadow 0.3s;
-      animation: glowPulse 2s ease-in-out infinite;
+      animation: glowPulse 2.24s ease-in-out infinite; /* -12% от прошлого */
     }
 
     @keyframes glowPulse {
@@ -132,8 +138,8 @@
         transform: scale(1);
       }
       50% {
-        box-shadow: 0 0 45px #00ff88;
-        transform: scale(1.22);
+        box-shadow: 0 0 40px #00ff88;
+        transform: scale(1.18);
       }
     }
 
@@ -156,7 +162,7 @@
 </head>
 <body>
 
-  <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" alt="Logo" class="logo">
+  <img src="logo.png" alt="Logo" class="logo">
 
   <h1>New platform gives up to <span style="color:#00ff88;">$300</span> bonus to all users! 🎁</h1>
 
@@ -172,7 +178,7 @@
   <script>
     document.getElementById("bonusButton").addEventListener("click", function(e) {
       e.preventDefault();
-      fbq('track', 'Lead'); // отправляем событие Lead
+      fbq('track', 'Lead');
       window.location.href = "https://t.me/INDIApromo_bot";
     });
   </script>
