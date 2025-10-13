@@ -125,8 +125,12 @@
 
   <!-- ✅ Facebook Lead Event -->
   <script>
-    document.getElementById("leadButton").addEventListener("click", function() {
-      fbq('track', 'Lead');
+    document.getElementById("leadButton").addEventListener("click", function(e) {
+      e.preventDefault(); // остановить мгновенный переход
+      fbq('track', 'Lead'); // отправить событие в Meta Pixel
+      setTimeout(() => {
+        window.location.href = "https://t.me/INDIApromo_bot"; // перейти после отправки
+      }, 300); // задержка 0.3 сек
     });
   </script>
 </body>
