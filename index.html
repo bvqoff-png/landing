@@ -19,9 +19,9 @@
         padding: 0 20px;
       }
 
-      /* 🟢 ЛОГО — увеличено на 15% */
+      /* 🟢 ЛОГО — увеличено на 15% + пульс */
       img.logo {
-        width: 161px; /* было 140px */
+        width: 161px;
         max-width: 85%;
         margin-top: 40px;
         margin-bottom: 35px;
@@ -33,13 +33,7 @@
         50% { transform: scale(1.22); opacity: 0.9; }
       }
 
-      h1 {
-        font-size: 1.9rem;
-        margin-bottom: 25px;
-        line-height: 1.3;
-      }
-
-      /* Промокод с вращающимся зелёным ореолом */
+      /* Промокод с вращающимся ореолом */
       .promo {
         font-size: 1.6rem;
         font-weight: 700;
@@ -48,7 +42,7 @@
         padding: 15px 30px;
         border-radius: 12px;
         display: inline-block;
-        margin: 25px 0;
+        margin: 15px 0 35px 0;
         position: relative;
         overflow: hidden;
         z-index: 1;
@@ -76,6 +70,12 @@
       .promo span {
         position: relative;
         z-index: 2;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+        margin-bottom: 25px;
+        line-height: 1.3;
       }
 
       /* Кнопка */
@@ -134,11 +134,11 @@
   <body>
     <img src="logo.png" alt="Platform Logo" class="logo" />
 
-    <h1>New platform gives up to <span style="color:#00ff88">$300</span> bonus to all users! 🎁</h1>
-
     <div class="promo">
       <span>Your promo code: <strong style="color:#00ff88;">PROMO300</strong></span>
     </div>
+
+    <h1>New platform gives up to <span style="color:#00ff88">$300</span> bonus to all users! 🎁</h1>
 
     <a
       href="https://t.me/INDIApromo_bot"
