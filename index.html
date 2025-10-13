@@ -18,10 +18,15 @@
     fbq('init', '2043099239850160'); 
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2043099239850160&ev=PageView&noscript=1"
-  /></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2043099239850160&ev=PageView&noscript=1"
+    />
+  </noscript>
   <!-- ✅ End Meta Pixel Code -->
+
+  <!-- ✅ Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <style>
     body {
@@ -85,6 +90,7 @@
       box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
       transition: 0.2s;
       display: inline-block;
+      cursor: pointer;
     }
 
     a.button:hover {
@@ -117,21 +123,26 @@
     <strong>PROMO300</strong>
   </div>
 
-  <a href="https://t.me/INDIApromo_bot" class="button" id="leadButton">Get bonus on Telegram</a>
+  <a id="leadButton" class="button g-recaptcha"
+     data-sitekey="YOUR_RECAPTCHA_SITE_KEY_HERE"
+     data-callback="onSubmit"
+     data-action="submit">
+     Get bonus on Telegram
+  </a>
 
   <p class="note">
     If the button doesn’t work, copy and search <span>@INDIApromo_bot</span> in Telegram.
   </p>
 
-  <!-- ✅ Facebook Lead Event -->
   <script>
-    document.getElementById("leadButton").addEventListener("click", function(e) {
-      e.preventDefault(); // остановить мгновенный переход
-      fbq('track', 'Lead'); // отправить событие в Meta Pixel
+    function onSubmit() {
+      fbq('track', 'Lead');
+      fbq('trackCustom', 'TelegramClick', {source: 'landing'});
+
       setTimeout(() => {
-        window.location.href = "https://t.me/INDIApromo_bot"; // перейти после отправки
-      }, 300); // задержка 0.3 сек
-    });
+        window.location.href = "https://t.me/INDIApromo_bot";
+      }, 1000);
+    }
   </script>
 </body>
 </html>
