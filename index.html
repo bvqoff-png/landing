@@ -19,57 +19,18 @@
         padding: 0 20px;
       }
 
-      /* 🟢 ЛОГО — увеличено на 15% + пульс */
+      /* 🟢 ЛОГО — увеличено и мягко пульсирует */
       img.logo {
         width: 161px;
         max-width: 85%;
         margin-top: 40px;
         margin-bottom: 35px;
-        animation: pulseLogo 2.5s infinite ease-in-out;
+        animation: pulseLogo 3s infinite ease-in-out;
       }
 
       @keyframes pulseLogo {
         0%, 100% { transform: scale(1); opacity: 1; }
         50% { transform: scale(1.22); opacity: 0.9; }
-      }
-
-      /* Промокод с вращающимся ореолом */
-      .promo {
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: #fff;
-        background: #252629;
-        padding: 15px 30px;
-        border-radius: 12px;
-        display: inline-block;
-        margin: 15px 0 35px 0;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-      }
-
-      .promo::before {
-        content: "";
-        position: absolute;
-        top: -8px;
-        left: -8px;
-        right: -8px;
-        bottom: -8px;
-        border-radius: 50%;
-        border: 3px solid rgba(0, 255, 136, 0.6);
-        box-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
-        animation: spinRing 3s linear infinite;
-        z-index: 0;
-      }
-
-      @keyframes spinRing {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-
-      .promo span {
-        position: relative;
-        z-index: 2;
       }
 
       h1 {
@@ -78,7 +39,32 @@
         line-height: 1.3;
       }
 
-      /* Кнопка */
+      /* 🔷 ПРОМОКОД — видимый в Telegram, без перекрытий */
+      .promo {
+        font-size: 1.6rem;
+        font-weight: 700;
+        background: #252629;
+        padding: 15px 30px;
+        border-radius: 12px;
+        display: inline-block;
+        margin: 25px 0;
+        border: 2px dashed #00ff88;
+        color: #fff;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+      }
+
+      .promo strong {
+        color: #00ff88;
+        animation: glow 2s infinite ease-in-out;
+      }
+
+      @keyframes glow {
+        0%, 100% { text-shadow: 0 0 10px #00ff88; }
+        50% { text-shadow: 0 0 25px #00ff88; }
+      }
+
+      /* 🟩 КНОПКА — ярче анимация */
       a.button {
         background: linear-gradient(90deg, #00b050, #00ff88);
         color: white;
@@ -87,16 +73,15 @@
         font-size: 1.15rem;
         text-decoration: none;
         transition: 0.3s;
-        animation: pulseButton 2.5s infinite ease-in-out;
+        animation: pulseButton 2.2s infinite ease-in-out;
       }
 
       a.button:hover {
-        opacity: 0.9;
         transform: scale(1.1);
       }
 
       @keyframes pulseButton {
-        0%, 100% { transform: scale(1); box-shadow: 0 0 12px #00ff88; }
+        0%, 100% { transform: scale(1); box-shadow: 0 0 10px #00ff88; }
         50% { transform: scale(1.22); box-shadow: 0 0 35px #00ff88; }
       }
 
@@ -104,6 +89,10 @@
         margin-top: 45px;
         font-size: 0.9rem;
         color: #bbb;
+      }
+
+      a.link {
+        color: #00ff88;
       }
     </style>
 
@@ -134,11 +123,9 @@
   <body>
     <img src="logo.png" alt="Platform Logo" class="logo" />
 
-    <div class="promo">
-      <span>Your promo code: <strong style="color:#00ff88;">PROMO300</strong></span>
-    </div>
-
     <h1>New platform gives up to <span style="color:#00ff88">$300</span> bonus to all users! 🎁</h1>
+
+    <div class="promo">Your promo code: <strong>PROMO300</strong></div>
 
     <a
       href="https://t.me/INDIApromo_bot"
@@ -150,7 +137,7 @@
 
     <p>
       If the button doesn’t work, copy this link manually:<br />
-      <a href="https://t.me/INDIApromo_bot" style="color:#00ff88;">https://t.me/INDIApromo_bot</a>
+      <a href="https://t.me/INDIApromo_bot" class="link">https://t.me/INDIApromo_bot</a>
     </p>
   </body>
 </html>
