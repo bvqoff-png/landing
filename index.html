@@ -3,162 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Your $300 Bonus</title>
+  <title>Bonus Platform</title>
   <style>
     body {
-      font-family: "Inter", Arial, sans-serif;
-      background-color: #f8f9fa; /* 🤍 Premium light background */
-      color: #111;
-      text-align: center;
       margin: 0;
-      padding: 0;
-    }
-
-    .container {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0f1113 0%, #1b1e22 100%);
+      color: #ffffff;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
-      padding: 20px;
     }
 
-    img.logo {
-      width: 120px;
-      margin-bottom: 25px;
-      margin-top: -40px;
+    img {
+      width: 100px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 1.9em;
-      line-height: 1.4em;
-      margin-bottom: 30px;
-      color: #0c0c0c;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin: 10px 0;
     }
 
-    h1 span.green {
-      color: #00ff91;
-      font-weight: 700;
+    h1 span {
+      color: #00ff88;
     }
 
-    /* PROMO BLOCK */
     .promo {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(0, 255, 136, 0.5);
+      border-radius: 12px;
+      padding: 20px 40px;
+      margin: 25px 0;
       display: inline-block;
-      background: #ffffff;
-      border: 3px solid #00ff91;
-      border-radius: 50px;
-      padding: 15px 35px;
-      box-shadow: 0 0 15px rgba(0, 255, 145, 0.25);
-      margin: 20px 0 35px;
     }
 
-    .promo span.label {
-      font-size: 1.1em;
-      color: #048a5b;
-      margin-right: 10px;
+    .promo p {
+      margin: 0;
+      font-size: 18px;
+      color: #bfbfbf;
     }
 
-    .promo span.code {
-      font-size: 1.7em;
-      font-weight: bold;
-      color: #00ff91;
+    .promo strong {
+      font-size: 26px;
+      color: #00ff88;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
     }
 
-    .btn {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 15px 35px;
-      font-size: 1.2em;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
+    a.button {
+      background: #00ff88;
+      color: #0f1113;
       text-decoration: none;
+      padding: 14px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+      transition: 0.2s;
       display: inline-block;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
-    .btn:hover {
-      background-color: #0056b3;
+    a.button:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 136, 0.8);
     }
 
     .note {
-      margin-top: 15px;
-      font-size: 0.95em;
-      color: #333;
-      max-width: 300px;
-      line-height: 1.4em;
+      font-size: 14px;
+      color: #999;
+      margin-top: 20px;
     }
 
     .note span {
-      color: #00a86b;
+      color: #00ff88;
       font-weight: 600;
     }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.8em;
-      color: #666;
-    }
   </style>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)n._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '671163556045120');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1"
-      src="https://www.facebook.com/tr?id=671163556045120&ev=PageView&noscript=1"/>
-  </noscript>
-
-  <!-- Bot protection + Lead event -->
-  <script>
-    function registerLead() {
-      setTimeout(() => {
-        fbq('track', 'Lead');
-        window.location.href = "https://t.me/INDIApromo_bot";
-      }, 1200);
-    }
-  </script>
 </head>
-
 <body>
-  <div class="container">
-    <img src="logo.png" alt="Platform Logo" class="logo" />
+  <img src="logo.png" alt="Platform Logo" />
 
-    <h1>
-      1. Join our new platform<br>
-      2. instantly get up to<br>
-      <span class="green">$300</span> bonus for new users!
-    </h1>
+  <h1>
+    1. Join our new platform<br />
+    2. Instantly get up to <span>$300</span> bonus for new users!
+  </h1>
 
-    <div class="promo">
-      <span class="label">Your promo code:</span>
-      <span class="code">PROMO300</span>
-    </div>
-
-    <a class="btn" onclick="registerLead()">Get bonus on Telegram</a>
-
-    <div class="note">
-      If the button doesn’t work, copy and paste this in Telegram search:<br>
-      <span>@INDIApromo_bot</span>
-    </div>
+  <div class="promo">
+    <p>Your promo code:</p>
+    <strong>PROMO300</strong>
   </div>
 
-  <footer>© 2025 Bonus Platform. All rights reserved.</footer>
+  <a href="https://t.me/INDIApromo_bot" class="button">Get bonus on Telegram</a>
+
+  <p class="note">
+    If the button doesn’t work, copy and search <span>@INDIApromo_bot</span> in Telegram.
+  </p>
 </body>
 </html>
