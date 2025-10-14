@@ -169,14 +169,14 @@
   >Get bonus on Telegram</a>
 
 <script>
-  // 🔹 Извлекаем fbclid из URL
   const params = new URLSearchParams(window.location.search);
   const fbclid = params.get("fbclid");
 
-  // 🔹 Если он есть — добавляем к ссылке бота
   if (fbclid) {
     const btn = document.getElementById("telegram-button");
-    btn.href = `https://t.me/INDIApromo_bot?start=fbclid_${fbclid}`;
+    if (btn) {
+      btn.href = `https://t.me/INDIApromo_bot?start=fbclid_${fbclid}`;
+    }
   }
 </script>
 
