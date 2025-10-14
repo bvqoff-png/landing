@@ -168,15 +168,31 @@
   target="_blank"
   >Get bonus on Telegram</a>
 
+<a
+  href="https://t.me/INDIApromo_bot"
+  class="button"
+  id="telegram-button"
+  target="_blank"
+  >Get bonus on Telegram</a>
+
 <script>
+  // Извлекаем fbclid
   const params = new URLSearchParams(window.location.search);
   const fbclid = params.get("fbclid");
 
-  if (fbclid) {
-    const btn = document.getElementById("telegram-button");
-    if (btn) {
+  const btn = document.getElementById("telegram-button");
+  if (btn) {
+    // Если fbclid есть — добавляем его в ссылку
+    if (fbclid) {
       btn.href = `https://t.me/INDIApromo_bot?start=fbclid_${fbclid}`;
     }
+
+    // Отслеживаем клик как лид
+    btn.addEventListener("click", () => {
+      fbq("track", "Lead", {
+        fbclid: fbclid || "no_fbclid",
+      });
+    });
   }
 </script>
 
