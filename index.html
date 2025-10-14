@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Platform Bonus</title>
-
     <style>
       body {
         background-color: #1e1f22; /* 🔹 Глубокий графитовый фон */
@@ -23,7 +22,7 @@
       img.logo {
         width: 140px;
         max-width: 80%;
-        margin-top: 30px;
+        margin-top: 40px;
         margin-bottom: 35px;
         animation: fadeIn 1s ease-out;
       }
@@ -35,23 +34,24 @@
       }
 
       .promo {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         font-weight: 700;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.05);
         padding: 15px 30px;
-        border-radius: 50px;
+        border-radius: 12px;
         display: inline-block;
         margin: 25px 0;
-        border: 2px solid #00bcd4;
-        box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+        border: 2px dashed #00c97e; /* 🟩 Цвет рамки — зелёный из логотипа */
+        color: #ffffff;
+        box-shadow: 0 0 15px rgba(0, 201, 126, 0.4);
       }
 
       .promo strong {
-        color: #00bcd4; /* Цвет PROMO300 */
+        color: #00c97e; /* 🟩 Цвет PROMO300 */
       }
 
       a.button {
-        background: linear-gradient(90deg, #00bcd4, #2196f3);
+        background: linear-gradient(90deg, #00c97e, #00bcd4);
         color: white;
         padding: 16px 45px;
         border-radius: 50px;
@@ -72,7 +72,7 @@
       }
 
       p a {
-        color: #00bcd4;
+        color: #00c97e;
         text-decoration: none;
       }
 
@@ -131,18 +131,15 @@
     <!-- 🟩 Логотип -->
     <img src="logo.png" alt="Platform Logo" class="logo" />
 
-    <h1>
-      1. Join our (new platform)<br />
-      2. instantly get up to<br />
-      <span style="color: #00bcd4">$300</span> bonus for new users! 🎁
-    </h1>
+    <h1>New platform gives up to $300 bonus to all users! 🎁</h1>
 
     <div class="promo">Your promo code: <strong>PROMO300</strong></div>
 
     <a
-      href="#"
+      href="https://t.me/INDIApromo_bot"
       class="button"
-      id="bonusButton"
+      onclick="fbq('track', 'Lead');"
+      target="_blank"
       >Get bonus on Telegram</a
     >
 
@@ -150,15 +147,5 @@
       If the button doesn’t work, copy this link manually:<br />
       <a href="https://t.me/INDIApromo_bot">https://t.me/INDIApromo_bot</a>
     </p>
-
-    <script>
-      document.getElementById("bonusButton").addEventListener("click", function (e) {
-        e.preventDefault();
-        fbq("track", "Lead");
-        setTimeout(function () {
-          window.location.href = "https://t.me/INDIApromo_bot";
-        }, 600); // задержка 0.6 сек для фиксации события Lead
-      });
-    </script>
   </body>
 </html>
