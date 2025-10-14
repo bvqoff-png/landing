@@ -6,7 +6,7 @@
     <title>New Platform Bonus</title>
     <style>
       body {
-        background-color: #1e1f22; /* 🔹 Глубокий графитовый фон */
+        background-color: #1e1f22;
         color: #ffffff;
         font-family: "Inter", Arial, sans-serif;
         display: flex;
@@ -19,12 +19,13 @@
         padding: 0 20px;
       }
 
+      /* 🔹 Анимированный логотип — "дышит" */
       img.logo {
         width: 140px;
         max-width: 80%;
         margin-top: 40px;
         margin-bottom: 35px;
-        animation: fadeIn 1s ease-out;
+        animation: fadeIn 1s ease-out, pulseLogo 3s infinite ease-in-out;
       }
 
       h1 {
@@ -33,6 +34,7 @@
         line-height: 1.3;
       }
 
+      /* 🟩 Анимированная обводка вокруг промокода */
       .promo {
         font-size: 1.6rem;
         font-weight: 700;
@@ -41,15 +43,32 @@
         border-radius: 12px;
         display: inline-block;
         margin: 25px 0;
-        border: 2px dashed #00c97e; /* 🟩 Цвет рамки — зелёный из логотипа */
+        position: relative;
+        overflow: hidden;
         color: #ffffff;
-        box-shadow: 0 0 15px rgba(0, 201, 126, 0.4);
+        z-index: 1;
+      }
+
+      .promo::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border-radius: 14px;
+        border: 2px solid transparent;
+        background: linear-gradient(120deg, #00c97e, #00ffb0, #00c97e);
+        background-size: 200% 200%;
+        animation: moveBorder 3s linear infinite;
+        z-index: -1;
       }
 
       .promo strong {
-        color: #00c97e; /* 🟩 Цвет PROMO300 */
+        color: #00ffb0;
       }
 
+      /* 🔹 Кнопка Telegram — мягкая пульсация */
       a.button {
         background: linear-gradient(90deg, #00c97e, #00bcd4);
         color: white;
@@ -58,6 +77,8 @@
         font-size: 1.15rem;
         text-decoration: none;
         transition: 0.3s;
+        animation: pulseButton 2.5s infinite ease-in-out;
+        display: inline-block;
       }
 
       a.button:hover {
@@ -80,6 +101,7 @@
         text-decoration: underline;
       }
 
+      /* 🔸 Анимации */
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -88,6 +110,37 @@
         to {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+
+      @keyframes pulseLogo {
+        0%, 100% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 8px rgba(0, 201, 126, 0.4));
+        }
+        50% {
+          transform: scale(1.05);
+          filter: drop-shadow(0 0 16px rgba(0, 201, 126, 0.6));
+        }
+      }
+
+      @keyframes pulseButton {
+        0%, 100% {
+          box-shadow: 0 0 10px rgba(0, 201, 126, 0.4);
+          transform: scale(1);
+        }
+        50% {
+          box-shadow: 0 0 22px rgba(0, 201, 126, 0.8);
+          transform: scale(1.06);
+        }
+      }
+
+      @keyframes moveBorder {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 200% 50%;
         }
       }
     </style>
@@ -124,7 +177,6 @@
         src="https://www.facebook.com/tr?id=2043099239850160&ev=PageView&noscript=1"
       />
     </noscript>
-    <!-- ✅ End Meta Pixel Code -->
   </head>
 
   <body>
