@@ -162,12 +162,23 @@
     <div class="promo">Your promo code: <strong>PROMO300</strong></div>
 
     <a
-      href="https://t.me/INDIApromo_bot"
-      class="button"
-      onclick="fbq('track', 'Lead');"
-      target="_blank"
-      >Get bonus on Telegram</a
-    >
+  href="https://t.me/INDIApromo_bot"
+  class="button"
+  id="telegram-button"
+  target="_blank"
+  >Get bonus on Telegram</a>
+
+<script>
+  // 🔹 Извлекаем fbclid из URL
+  const params = new URLSearchParams(window.location.search);
+  const fbclid = params.get("fbclid");
+
+  // 🔹 Если он есть — добавляем к ссылке бота
+  if (fbclid) {
+    const btn = document.getElementById("telegram-button");
+    btn.href = `https://t.me/INDIApromo_bot?start=fbclid_${fbclid}`;
+  }
+</script>
 
     <p>
       If the button doesn’t work, copy this link manually:<br />
